@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300 ease-in-out antialiased cursor-none;
+  }
+
+  .dark body {
+    @apply bg-[#0a0a0a] text-slate-100;
+  }
+}
+
+/* Custom View Transition durations for the theme switch */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
