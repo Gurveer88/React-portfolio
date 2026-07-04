@@ -54,7 +54,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 w-max max-w-[95vw]">
-      <nav className="flex items-center gap-1 sm:gap-2 px-2 sm:px-6 py-2 sm:py-4 rounded-full bg-white/70 dark:bg-black/50 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all max-w-[95vw] overflow-x-auto">
+      <nav className="flex items-center flex-nowrap w-max gap-1 sm:gap-2 px-2 sm:px-6 py-2 sm:py-4 rounded-full bg-white/70 dark:bg-black/50 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all max-w-[95vw] overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         
         {navItems.map((item, index) => {
           // Determine if this specific item is active
