@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
-import pfp from "../../assets/MIYA.png"; // Ensure you have a profile picture in the assets folder
+import pfp from "../../assets/pfp.webp"; // Ensure you have a profile picture in the assets folder
 
 export default function Hero() {
   const containerVariants = {

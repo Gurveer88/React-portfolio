@@ -17,7 +17,7 @@ export default function Navbar() {
     { icon: <User size={20} />, label: 'About', path: '/about', hash: '', id: 'about' },
     { icon: <Code2 size={20} />, label: 'Skills', path: '/', hash: '#skills', id: 'skills' },
     { icon: <Briefcase size={20} />, label: 'Projects', path: '/', hash: '#projects', id: 'projects' },
-    { icon: <FileText size={20} />, label: 'Resume', path: '/resume.pdf', hash: '', id: 'resume' },
+    { icon: <FileText size={20} />, label: 'Resume', path: '/resume', hash: '', id: 'resume' },
     { icon: <Mail size={20} />, label: 'Contact', path: '/', hash: '#contact', id: 'contact' },
   ];
 
