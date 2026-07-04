@@ -54,7 +54,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 w-max max-w-[95vw]">
-      <nav className="flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-3 sm:py-4 rounded-full bg-white/70 dark:bg-black/50 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all">
+      <nav className="flex items-center gap-1 sm:gap-2 px-2 sm:px-6 py-2 sm:py-4 rounded-full bg-white/70 dark:bg-black/50 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all max-w-[95vw] overflow-x-auto">
         
         {navItems.map((item, index) => {
           // Determine if this specific item is active
@@ -67,7 +67,8 @@ export default function Navbar() {
               key={index}
               href={item.path + item.hash}
               onClick={(e) => handleNavClick(e, item)}
-              className={`group relative p-3 rounded-full transition-all duration-300 cursor-none ${
+              // FIX 1: Added `shrink-0` and changed `p-3` to `p-2 sm:p-3`
+              className={`shrink-0 group relative p-2 sm:p-3 rounded-full transition-all duration-300 cursor-none ${
                 isActive 
                   ? 'bg-slate-200 dark:bg-white/20 text-black dark:text-white' 
                   : 'text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10'
@@ -82,11 +83,12 @@ export default function Navbar() {
           );
         })}
 
-        <div className="w-px h-8 bg-slate-300 dark:bg-white/20 mx-1 sm:mx-2" />
+        <div className="shrink-0 w-px h-8 bg-slate-300 dark:bg-white/20 mx-1 sm:mx-2" />
         
         <button
           onClick={toggleTheme}
-          className="group relative flex items-center justify-center p-3 rounded-full text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-all duration-300 cursor-none overflow-hidden"
+          // FIX 2: Added `shrink-0` and changed `p-3` to `p-2 sm:p-3`
+          className="shrink-0 group relative flex items-center justify-center p-2 sm:p-3 rounded-full text-slate-600 dark:text-slate-300 hover:text-black dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-all duration-300 cursor-none overflow-hidden"
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
