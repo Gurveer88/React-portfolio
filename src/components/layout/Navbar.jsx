@@ -54,7 +54,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 w-max max-w-[95vw]">
-      <nav className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-3 sm:py-4 rounded-full bg-white/70 dark:bg-black/50 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all">
+      <nav className="flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-3 sm:py-4 rounded-full bg-white/70 dark:bg-black/50 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg transition-all">
         
         {navItems.map((item, index) => {
           // Determine if this specific item is active
